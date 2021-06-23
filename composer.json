@@ -1,0 +1,39 @@
+{
+  "name": "cvoid/kuaishou-mini-app",
+  "description": "快手小程序",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "cvoid",
+      "email": "crynocry97@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "KuaiShouMiniApp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=7.4|^8.0",
+    "psr/log": "^1.1",
+    "psr/http-client": "^1.0",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "psr/simple-cache": "^1.0",
+    "ext-openssl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "scripts": {
+    "test": [
+      "./vendor/bin/phpunit tests"
+    ]
+  }
+}
