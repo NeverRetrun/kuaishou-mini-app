@@ -36,7 +36,7 @@ class Factory
     {
         if (
             function_exists('app') === false ||
-            class_exists('\Illuminate\Cache\CacheManager') === false
+            class_exists('Illuminate\Cache\CacheManager') === false
         ) {
             throw new Exception('not laravel');
         }
@@ -44,7 +44,7 @@ class Factory
         return new KuaiShouMiniApp(
             new Config($appId, $appSecret),
             null,
-            app('\Illuminate\Cache\CacheManager')->store(),
+            app('Illuminate\Cache\CacheManager')->store(),
         );
     }
 }
