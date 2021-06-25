@@ -24,8 +24,8 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         return new KuaiShouMiniApp(
             new Config(
-                '',
-                ''
+                'ks692428446989171373',
+                'mwE74z_0Fy8bod8w-RX3ug'
             ),
             $httpClient
         );
