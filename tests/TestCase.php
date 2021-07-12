@@ -18,15 +18,17 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * mock app
      * @param HttpClientInterface|null $httpClient
+     * @param string|null $appId
      * @return KuaiShouMiniApp
      */
-    public function mockApp(?HttpClientInterface $httpClient = null): KuaiShouMiniApp
+    public function mockApp(
+        ?HttpClientInterface $httpClient = null,
+        ?string $appId = '',
+        ?string $appSecret = ''
+    ): KuaiShouMiniApp
     {
         return new KuaiShouMiniApp(
-            new Config(
-                '',
-                ''
-            ),
+            new Config($appId, $appSecret),
             $httpClient
         );
     }

@@ -6,6 +6,7 @@ namespace KuaiShouMiniApp;
 
 use KuaiShouMiniApp\Handlers\Encryptor\Manager as EncryptorManager;
 use KuaiShouMiniApp\Handlers\Login\Manager as LoginManager;
+use KuaiShouMiniApp\Handlers\Payment\Manager as PaymentManager;
 use KuaiShouMiniApp\Kernel\Config;
 use KuaiShouMiniApp\Kernel\Http\HttpClientInterface;
 use KuaiShouMiniApp\Support\ProviderStore;
@@ -27,6 +28,7 @@ class KuaiShouMiniApp
                 [
                     'encryptor' => EncryptorManager::class,
                     'login' => LoginManager::class,
+                    'payment' => PaymentManager::class,
                 ],
                 $httpClient,
                 $cache,
@@ -41,5 +43,10 @@ class KuaiShouMiniApp
     public function login(): LoginManager
     {
         return $this->providers->get('login');
+    }
+
+    public function payment(): PaymentManager
+    {
+        return $this->providers->get('payment');
     }
 }

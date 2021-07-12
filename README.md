@@ -27,6 +27,7 @@
 | getAccessToken  | login->getAccessToken | ☑️ |
 | 登录 - code2Session  | login->code2Session | ☑️ |
 | 手机号解密  | encryptor->encryptMobile  | ☑️ |
+| 支付  | payment->wechat  | ☑️ |
 
 
 ### Usage
